@@ -89,3 +89,48 @@ reusable functions that solve specific tasks. This activity encourages:
 // - Explain how your team approached the design and testing process
 
 // ✅ Bonus: Can you extend any of the functions to be more flexible or reusable?
+
+
+//Task 1
+let person = { name: "Alice", role: "speaker" };
+
+function badge(person) {  //function prints a badge with the name and role of an attendee from the object
+    console.log(`Name: ${person.name}  Role: ${person.role}`);
+};
+badge(person);  //calls the function badge to output to console
+
+
+//Task 2
+let stats1 = { attendance: 99, costPer: 25 };
+let stats2 = { attendance: 120, costPer: 25 }
+function calculateCost(stats) {  //function calculates the cost base on the information in the object
+    if ((stats.attendance) > 100) {     //calculates cost with discount for more than 100
+        cost = (stats.attendance * stats.costPer * .9);
+    }
+    else {   //calculates cost for 100 or less
+        cost = (stats.attendance * stats.costPer);
+    }
+    console.log (`The total cost for ${stats.attendance} people is ${cost}`);  //output to console
+};
+
+calculateCost(stats1);  // calls the function to calculate the cost
+calculateCost(stats2);
+
+
+
+//Task 3
+let herEmail = "jyllatham@hotmail.com";
+let hisEmail = "chrisbrady@gmail"
+let valid = false
+function validateEmail (email) {   //function to validate email contains @ & .
+    if (email.includes("@") && email.includes(".")) {
+        valid = true;
+        console.log (`[ ${email} ] is a VALID email.`);  //message returned if email contains @ & .
+    } else {
+        valid = false;
+        console.log (`[ ${email} ] is NOT a vailid email.`);  //meassage returned if email does not contain @ & .
+    }
+}
+validateEmail (herEmail);  //vaildates herEmail
+validateEmail (hisEmail);  //validates hisEmail
+
